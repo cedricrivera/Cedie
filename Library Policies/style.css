@@ -7,27 +7,29 @@
 
 .pagecontent{
     background-color: #2a276a;
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-rows: auto;
     padding: 40px;
+    gap: 3rem;
+}
+
+.Policy_BED1{
+    display: grid;
+    grid-template-rows: auto;
 }
 
 .top h1{
     padding: 10px;
     font-size: 40px;
     background-color: #fab95b;
-    display: grid;
-    align-items: center;
-    justify-content: center;
     border-radius: 20px;
     color: #2a276a;
     text-align: center;
 }
 
 .BED{
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     padding: 20px;
 }
 
@@ -51,6 +53,7 @@
     margin-top: 20px;
     text-align: justify;
     font-size: 20px;
+    line-height: 1.5;
 }
 
 .pagecontent li{
@@ -62,7 +65,38 @@ li::marker {
     color: #ffff;
 }
 
-@media screen and (max-width: 425px) {
+.Policy_BED2 .top h1{
+    font-size: 27px;
+}
+
+.Curiosities1 , .Curiosities2{
+    text-indent: 50px;
+    color: #fff;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+.Curiosities1{
+    margin-top: 20px;
+}
+
+.Curiosities_content ul{
+    padding: 0 4rem;
+}
+
+.Curiosities2{
+    margin-top: 10px;
+}
+
+.Curiosities_content ul li p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 520px) {
     .top h1{
         font-size: 24px;
     }
@@ -78,6 +112,22 @@ li::marker {
     }
     .BED h1{
         font-size: 20px;
+    }
+
+    .Policy_BED2 .top h1{
+        font-size: 22px;
+    }
+
+    .Curiosities1 , .Curiosities2{
+        font-size: 19px;
+    }
+
+    .Curiosities_content ul li p{
+        font-size: 16px;
+    }
+
+    .Curiosities_content ul{
+        padding: 0;
     }
 }
 
