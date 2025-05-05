@@ -20,6 +20,7 @@
     text-align: center;
     background-color: #2a276a;
     color: #fab95b;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .Policy_BED1{
@@ -255,17 +256,44 @@ li::marker {
   }
 
 /* FAQ's CSS*/
+.FAQs_contents{
+    display: grid;
+    gap: 3rem;
+}
+
+.faqcontent{
+  background-color: #2a276a;
+  padding: 20px;
+  border-radius: 20px;
+  display: grid;
+  gap: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 .faq-container {
     max-width: 700px;
     margin: 0 auto;
-    background: #fff;
+    background: #fab95b;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
+    max-height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
+
+  .faqtitle h1{
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+    background-color: #fab95b;
+    color: #2a276a;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
   .faq-item {
     margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #2a276a;
+    padding-bottom: 6px;
   }
   .faq-item:last-child {
     border-bottom: none;
@@ -278,12 +306,24 @@ li::marker {
     cursor: pointer;
     padding: 10px;
     transition: background 0.3s;
+    color: #2a276a;
+    transition: all ease 0.5s;
+    border-radius: 5px;
   }
   .faq-question:hover {
-    background: #f0f0f0;
+    background: #2a276a;
+    transition: all ease 0.5s;
+    color: #fff;
   }
+
+  .faq-question:hover .arrow{ 
+    color: #fff;
+    transition: all ease 0.5s;
+  }
+
   .arrow {
     transition: transform 0.3s ease;
+    color: #2a276a;
   }
   input[type="checkbox"] {
     display: none;
@@ -297,11 +337,12 @@ li::marker {
   }
 
   .faq-answer li::marker {
-    color: black;
+    color: #2a276a;
 }
   input[type="checkbox"]:checked ~ .faq-answer {
     max-height: 200px;
     padding-top: 10px;
+    color:#2a276a;
   }
   input[type="checkbox"]:checked + label .arrow {
     transform: rotate(180deg);
@@ -342,3 +383,159 @@ li::marker {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     object-fit: cover;
   }
+
+  @media screen and (max-width: 824px) {
+    .orgtitle h1{
+        font-size: 1.5rem;
+  }
+}
+
+  /* ABOUT US */
+
+  .aboutuspage{
+    display: grid;
+    gap: 3rem;
+  }
+
+  .aboutuscontent{
+    display: grid;
+    gap: 3rem;
+    background-color: #2a276a;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .aboutuscontent h1{
+    font-size: 2rem;
+    color: #ffff;
+    text-align: center;
+    padding: 8px;
+    background-color: #fab95b;
+    color: #2a276a;
+    border-radius: 20px;
+  }
+
+  .aboutus{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3rem;
+  }
+
+  .aboutus img{
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
+    max-width: 100%;
+  }
+
+  .aboutuscontent p{
+    color: #fab95b;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .lrchead h2{
+    font-size: 1.5rem;
+    color: #ffff;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .lrchead p{
+    text-align: center;
+    margin-top: -9px;
+    opacity: 0.9;
+  }
+
+  .teamlrc{
+    display: grid;
+  }
+
+  .teamlrc p{
+    margin-bottom: 8px;
+  }
+
+  .teamlrc img{
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 824px) {
+    .aboutuscontent h1{
+        font-size: 1.5rem;
+    }
+    .aboutuscontent p{
+        font-size: 17px;
+    }
+    .aboutus{
+        grid-auto-flow: row;
+    }
+    .aboutus img{
+        max-width: 100%;
+        height: auto;
+    }
+    .lrchead{
+      display: grid;
+    }
+    .lrchead img{
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  /* Updates */
+
+  .Updatepage{
+    display: grid;
+    gap: 3rem;
+  }
+
+  .updatecontent{
+    display: grid;
+    gap: 3rem;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    grid-template-areas:
+    'gs hs'
+    'faculty .';
+  }
+
+  .booksgs{
+    grid-area: gs;
+  }
+  .bookshs{
+    grid-area: hs;
+  } 
+  .booksflrc{
+    grid-area: faculty;
+  }
+
+  .booksgs, .bookshs{
+    display: grid;
+    gap: 1.5rem;
+    background-color: #2a276a;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .booksgs #coverflow, .bookshs .coverflow_HS{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .booksgs h1, .bookshs h1{
+    font-size: 2rem;
+    color: #ffff;
+    text-align: center;
+    padding: 8px;
+    background-color: #fab95b;
+    color: #2a276a;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
